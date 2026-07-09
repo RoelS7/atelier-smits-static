@@ -2530,33 +2530,36 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 //# sourceURL=https://www.ateliersmits.be/wp-includes/js/wp-emoji-loader.min.js
 </script>
 document.addEventListener("DOMContentLoaded", function() {
-    // 1. Selecteer alle projecten met de klasse 'rb-items'
+    // 1. Selecteer alle projecten
     const items = document.querySelectorAll('.rb-items');
     const button = document.getElementById('load-more-btn');
     
-    // Veiligheidscheck
+    // Test-logje voor de console (F12) om te kijken of Git de items herkent
+    console.log("Toon Meer Script geladen. Aantal gevonden projecten:", items.length);
+
     if (!items.length || !button) return;
 
-    // 2. Als er 6 of minder projecten zijn, verberg de knop direct
+    // 2. Als er 6 of minder zijn, knop weghalen
     if (items.length <= 6) {
         button.style.display = 'none';
         return;
     }
     
-    // 3. Verberg automatisch alles vanaf het 7e project (index 6)
+    // 3. HARD VERBERGEN vanaf project 7 (index 6) via inline styles
     for (let i = 6; i < items.length; i++) {
-        items[i].classList.add('d-none');
+        items[i].style.setProperty('display', 'none', 'important');
     }
     
-    // 4. Toon de rest van de projecten na een klik op de knop
+    // 4. Klik-actie om ze weer te tonen
     button.addEventListener('click', function(e) {
         e.preventDefault();
         
         for (let i = 6; i < items.length; i++) {
-            items[i].classList.remove('d-none');
+            // Zet de display weer terug naar de originele CSS-waarde van de layout
+            items[i].style.display = ''; 
         }
         
-        // Verberg de knop aangezien alles nu zichtbaar is
+        // Verberg de knop
         button.style.display = 'none';
     });
 });
