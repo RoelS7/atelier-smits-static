@@ -1,0 +1,238 @@
+        :root {
+            /* Systeem Presets */
+            --wp--preset--aspect-ratio--square: 1;
+            --wp--preset--aspect-ratio--4-3: 4/3;
+            --wp--preset--aspect-ratio--3-4: 3/4;
+            --wp--preset--aspect-ratio--3-2: 3/2;
+            --wp--preset--aspect-ratio--2-3: 2/3;
+            --wp--preset--aspect-ratio--16-9: 16/9;
+            --wp--preset--9-16: 9/16;
+
+            /* Standaard Kleuren */
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            
+            /* Inbio Thema Specifieke Kleuren (Cruciaal) */
+            --wp--preset--color--inbio-primary: #ff014f;
+            --wp--preset--color--inbio-secondary: #FFDC60;
+            --wp--preset--color--inbio-tertiary: #FAB8C4;
+            --wp--preset--color--inbio-white: #ffffff;
+            --wp--preset--color--inbio-dark: #27272E;
+
+            /* Typografie & Spatiëring */
+            --wp--preset--font-size--small: 12px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--font-size--normal: 16px;
+            --wp--preset--font-size--huge: 50px;
+        }
+
+        /* Basis Structuur & Flex/Grid Helpers voor Elementor */
+        body { margin: 0; padding: 0; }
+        .is-layout-flex { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5em; }
+        .is-layout-flex > * { margin: 0; }
+        .is-layout-grid { display: grid; gap: 0.5em; }
+        .is-layout-grid > * { margin: 0; }
+
+        /* Dynamische Systeemkoppelingen (Utility-classes voor tekst/achtergrond) */
+        .has-black-color { color: var(--wp--preset--color--black) !important; }
+        .has-white-color { color: var(--wp--preset--color--white) !important; }
+        .has-inbio-primary-color { color: var(--wp--preset--color--inbio-primary) !important; }
+        .has-inbio-dark-color { color: var(--wp--preset--color--inbio-dark) !important; }
+        
+        .has-black-background-color { background-color: var(--wp--preset--color--black) !important; }
+        .has-white-background-color { background-color: var(--wp--preset--color--white) !important; }
+        .has-inbio-primary-background-color { background-color: var(--wp--preset--color--inbio-primary) !important; }
+        .has-inbio-dark-background-color { background-color: var(--wp--preset--color--inbio-dark) !important; }
+
+        /* Inbio Audio Switcher Theme Fix */
+        .inbio-audio-enable.left .inbio-audio-switcher {
+            left: 30px;
+            right: 30px;
+            bottom: 110px;
+            z-index: 9999;
+        }
+
+        .elementor-kit-5 {
+            --e-global-typography-primary-font-family: "Roboto";
+            --e-global-typography-primary-font-weight: 600;
+            --e-global-typography-secondary-font-family: "Roboto Slab";
+            --e-global-typography-secondary-font-weight: 400;
+            --e-global-typography-text-font-family: "Roboto";
+            --e-global-typography-text-font-weight: 400;
+            --e-global-typography-accent-font-family: "Roboto";
+            --e-global-typography-accent-font-weight: 500;
+        }
+        .elementor-section.elementor-section-boxed > .elementor-container, .e-con {
+            max-width: 1320px;
+        }
+        .elementor-widget:not(:last-child) {
+            margin-block-end: 20px;
+        }
+        .elementor-element {
+            --widgets-spacing: 20px 20px;
+            --widgets-spacing-row: 20px;
+            --widgets-spacing-column: 20px;
+        }
+        h1.entry-title {
+            display: var(--page-title-display);
+        }
+
+        @media(max-width: 1024px) {
+            .elementor-section.elementor-section-boxed > .elementor-container, .e-con { max-width: 1024px; }
+        }
+        @media(max-width: 767px) {
+            .elementor-section.elementor-section-boxed > .elementor-container, .e-con { max-width: 767px; }
+        }
+
+        /* Pagina Elementen & Kleurenschema (Donker / Goud Accent) */
+        .elementor-251 .elementor-element.elementor-element-898c42b,
+        .elementor-251 .elementor-element.elementor-element-f39949b,
+        .elementor-251 .elementor-element.elementor-element-2f00162,
+        .elementor-251 .elementor-element.elementor-element-38f594c,
+        .elementor-251 .elementor-element.elementor-element-7a349c3,
+        .elementor-251 .elementor-element.elementor-element-61f119d,
+        .elementor-251 .elementor-element.elementor-element-e10e916,
+        .elementor-251 .elementor-element.elementor-element-19c5b7d,
+        .elementor-251 .elementor-element.elementor-element-3eb14c4,
+        .elementor-251 .elementor-element.elementor-element-efca28c {
+            background-color: #111111;
+            transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+        }
+
+        .elementor-251 .elementor-element.elementor-element-65554b5 span.subtitle { color: #B8925C; }
+        .elementor-251 .elementor-element.elementor-element-65554b5 .inner .title,
+        .elementor-251 .elementor-element.elementor-element-65554b5 .banner-inner h1,
+        .elementor-251 .elementor-element.elementor-element-65554b5 .inner .title .header-caption span,
+        .elementor-251 .elementor-element.elementor-element-4074830 .sec-title,
+        .elementor-251 .elementor-element.elementor-element-4074830 .sticky-home-wrapper h5.title,
+        .elementor-251 .elementor-element.elementor-element-2045399 .title,
+        .elementor-251 .elementor-element.elementor-element-0a43d25 .sec-title,
+        .elementor-251 .elementor-element.elementor-element-0a43d25 .sticky-home-wrapper h5.title,
+        .elementor-251 .elementor-element.elementor-element-3fa6de0 .title a,
+        .elementor-251 .elementor-element.elementor-element-3fa6de0 .rn-portfolio .inner .content .category-info .meta span,
+        .elementor-251 .elementor-element.elementor-element-3fa6de0 .rn-portfolio .inner .content .category-info .meta span a,
+        .elementor-251 .elementor-element.elementor-element-4bf5c75 .sec-title,
+        .elementor-251 .elementor-element.elementor-element-4bf5c75 .sticky-home-wrapper h5.title,
+        .elementor-251 .elementor-element.elementor-element-cddc240 .portfolio-single .inner .title,
+        .elementor-251 .elementor-element.elementor-element-0a98ad4 .sec-title,
+        .elementor-251 .elementor-element.elementor-element-0a98ad4 .sticky-home-wrapper h5.title,
+        .elementor-251 .elementor-element.elementor-element-91996b8 .sec-title,
+        .elementor-251 .elementor-element.elementor-element-91996b8 .sticky-home-wrapper h5.title,
+        .elementor-251 .elementor-element.elementor-element-0dc9f60 .contact-about-area .title-area h4.title { 
+            color: #EAEAEA !important; 
+        }
+
+        .elementor-251 .elementor-element.elementor-element-65554b5 .inner .description,
+        .elementor-251 .elementor-element.elementor-element-2045399 .rn-service .inner .content p.description,
+        .elementor-251 .elementor-element.elementor-element-2045399 .service-card-one .inner p.describe,
+        .elementor-251 .elementor-element.elementor-element-cddc240 .portfolio-single .inner p.description,
+        .elementor-251 .elementor-element.elementor-element-0dc9f60 .contact-about-area .description p,
+        .elementor-251 .elementor-element.elementor-element-0dc9f60 .contact-about-area .description span,
+        .elementor-251 .elementor-element.elementor-element-0dc9f60 .contact-about-area .description span a,
+        .elementor-251 .elementor-element.elementor-element-0dc9f60 .contact-about-area .social-area .name { 
+            color: #B8B1A4 !important; 
+        }
+
+        /* Buttons & Hover states */
+        .elementor-251 .elementor-element.elementor-element-9c35fc8 .elementor-button {
+            background-color: #B8925C;
+            fill: #111111;
+            color: #111111;
+            border-style: solid;
+            border-width: 1px;
+        }
+        .elementor-251 .elementor-element.elementor-element-9c35fc8 .elementor-button:hover,
+        .elementor-251 .elementor-element.elementor-element-9c35fc8 .elementor-button:focus {
+            background-color: #111111;
+            color: #B8925C;
+            border-color: #B8925C;
+        }
+        .elementor-251 .elementor-element.elementor-element-3fa6de0 .title a:hover,
+        .elementor-251 .elementor-element.elementor-element-3fa6de0 .title:hover a i { 
+            color: #F5F5DC; 
+        }
+
+        /* Dividers */
+        .elementor-251 .elementor-element.elementor-element-8b5a261,
+        .elementor-251 .elementor-element.elementor-element-94b926e,
+        .elementor-251 .elementor-element.elementor-element-61cc0bb,
+        .elementor-251 .elementor-element.elementor-element-40c412e {
+            --divider-border-style: solid;
+            --divider-color: #B8925C;
+            --divider-border-width: 1px;
+        }
+        .elementor-251 .elementor-element.elementor-element-8b5a261 .elementor-divider,
+        .elementor-251 .elementor-element.elementor-element-94b926e .elementor-divider,
+        .elementor-251 .elementor-element.elementor-element-61cc0bb .elementor-divider,
+        .elementor-251 .elementor-element.elementor-element-40c412e .elementor-divider {
+            padding-block-start: 15px;
+            padding-block-end: 15px;
+        }
+
+        /* Structuur & Responsive Spacing Overrides */
+        .elementor-251 .elementor-element.elementor-element-38f594c { padding: 60px 0px; }
+        .elementor-251 .elementor-element.elementor-element-61f119d { padding: 60px 0px 70px 0px; }
+        .elementor-251 .elementor-element.elementor-element-19c5b7d { padding: 60px 0px; }
+        .elementor-251 .elementor-element.elementor-element-efca28c { padding: 62px 0px 80px 0px; }
+        .elementor-251 .elementor-element.elementor-element-8181517 > .elementor-widget-wrap > .elementor-widget:not(:last-child),
+        .elementor-251 .elementor-element.elementor-element-e3798d2 > .elementor-widget-wrap > .elementor-widget:not(:last-child) {
+            margin-block-end: 40px;
+        }
+        :root { --page-title-display: none; }
+
+        @media(min-width: 768px) {
+            .elementor-251 .elementor-element.elementor-element-4a6204b { width: 35.463%; }
+            .elementor-251 .elementor-element.elementor-element-6c957ff { width: 64.498%; }
+        }
+        @media(max-width: 1024px) and (min-width: 768px) {
+            .elementor-251 .elementor-element.elementor-element-2649980,
+            .elementor-251 .elementor-element.elementor-element-4a6204b,
+            .elementor-251 .elementor-element.elementor-element-6c957ff { width: 100%; }
+        }
+        @media(max-width: 1024px) {
+            .elementor-251 .elementor-element.elementor-element-3147cd5 {
+                width: var(--container-widget-width, 537.992px);
+                max-width: 537.992px;
+                text-align: center;
+            }
+        }
+
+         :root { 
+            --color-subtitle: #b8925c; 
+            --color-primary: #b8925c; 
+            --color-primary-gradient-from: #fffff0; 
+            --color-primary-gradient-to: #fcd9da; 
+        }
+        .rn-nav-list .nav-item .nav-link:hover, 
+        .rn-nav-list .nav-item .nav-link.active,
+        .slide .content .inner .title span,
+        .banner-details-wrapper-sticky .banner-title-area .title span { 
+            color: #b8925c; 
+        }
+
+         .elementor-text-editor p {
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+        .rn-header.header--fixed.rb-sticky {
+            display: block;
+        }
+        .padding-left-0 .contact-form-wrapper {
+            margin-left: 0;
+        }
+        
+        /* Oude logo-hoogte fix (veilig weggecommentarieerd via geldige syntaxis) */
+        /* .header-left .logo img {
+            height: 149px !important;
+            width: 165px !important;
+        }
+        */
+
+        body.sticky .header-wrapper .logo img.dark-logo,
+        body.sticky .header-wrapper .logo img.light-logo {
+            max-width: 100% !important;
+        }
