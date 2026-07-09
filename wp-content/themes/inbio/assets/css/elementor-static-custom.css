@@ -236,3 +236,52 @@
         body.sticky .header-wrapper .logo img.light-logo {
             max-width: 100% !important;
         }
+
+        /* Hero Content Overrides */
+.custom-hero-content-wrapper {
+    padding: 60px 0;
+    color: #ffffff; /* Standaard tekstkleur */
+}
+
+/* De subtitel (het goudkleurige lijntje/tekstje) */
+.custom-hero-content-wrapper .subtitle {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #B8925C; /* Je kenmerkende goudkleur */
+    margin-bottom: 20px;
+}
+
+/* De hoofdtitel */
+.custom-hero-content-wrapper .title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem); /* Responsive font-size */
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+/* De beschrijving */
+.custom-hero-content-wrapper .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d1d1d1;
+    max-width: 600px;
+}
+
+/* Zorg dat afbeeldingen in de grid niet uit hun plaatje knallen */
+.custom-hero-content-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optioneel: subtiele afronding */
+}
+
+/* Mobiele optimalisatie */
+@media (max-width: 991px) {
+    .custom-hero-content-wrapper {
+        text-align: center;
+    }
+    .custom-hero-content-wrapper .description {
+        margin: 0 auto; /* Tekst centreren op mobiel */
+    }
+}
