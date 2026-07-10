@@ -24871,6 +24871,7 @@ body.white-version .blog-style-three .carousel-control-next {
     /* Verberg de hele highlights-carousel én de titel volledig op mobiel */
     .elementor-element-4bf5c75, 
     .elementor-element-cddc240 {
+    display:none;!important
     }
 
     /* Reset de Elementor hero-hoogte voor mobiel */
