@@ -24874,4 +24874,152 @@ body.white-version .blog-style-three .carousel-control-next {
         text-align: center !important;
         display: block !important;
     }
+    /* 1. Reset de Elementor sectie-hoogte voor mobiel zodat hij niet geforceerd 'full screen' pusht */
+
+    .elementor-element-898c42b {
+
+        height: auto !important;
+
+        min-height: auto !important;
+
+        padding-top: 60px !important;
+
+        padding-bottom: 40px !important;
+
+    }
+
+
+
+    /* 2. Centreer alle teksten en elementen in de hero */
+
+    .elementor-element-898c42b .elementor-widget-wrap {
+
+        text-align: center !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+    }
+
+
+
+    /* 3. Voorkom dat de roterende tekst afbreekt of een vaste desktop-breedte pakt */
+
+    .elementor-element-898c42b .cd-words-wrapper {
+
+        width: auto !important;
+
+        display: inline-block !important;
+
+        overflow: visible !important;
+
+        text-align: center !important;
+
+    }
+
+    
+
+    .elementor-element-898c42b .cd-headline {
+
+        display: block !important;
+
+        text-align: center !important;
+
+    }
+
+
+
+    /* 4. Maak de beschrijving compact en leesbaar */
+
+    .elementor-element-898c42b .description {
+
+        text-align: center !important;
+
+        font-size: 15px !important;
+
+        line-height: 1.6 !important;
+
+        max-width: 90% !important;
+
+        margin: 15px auto 25px auto !important;
+
+    }
+
+
+
+    /* 5. Zorg dat de knop mooi gecentreerd staat en niet plakt */
+
+    .elementor-element-9c35fc8 {
+
+        margin-bottom: 40px !important; /* Ruimte tussen knop en de afbeelding eronder */
+
+    }
+
+    
+
+    .elementor-element-9c35fc8 .elementor-button-wrapper {
+
+        text-align: center !important;
+
+    }
+
+
+
+    /* 6. Breng de afbeelding (het logo) terug naar een subtieler formaat */
+
+    .elementor-element-3147cd5 img {
+
+        max-width: 140px !important; /* Niet te lomp groot op een gsm scherm */
+
+        height: auto !important;
+
+        margin: 0 auto !important;
+
+        display: block !important;
+
+        opacity: 0.9;
+
+    }
+
+/* Dwing de kolom en de widget-container van de afbeelding in het midden */
+
+    .elementor-element-8f44579,
+
+    .elementor-element-3147cd5,
+
+    .elementor-element-3147cd5 .elementor-widget-container {
+
+        text-align: center !important;
+
+        display: flex !important;
+
+        justify-content: center !important;
+
+        align-items: center !important;
+
+        width: 100% !important;
+
+    }
+
+
+
+    /* De afbeelding zelf */
+
+    .elementor-element-3147cd5 img {
+
+        max-width: 140px !important;
+
+        height: auto !important;
+
+        margin: 0 auto !important;
+
+        display: block !important;
+
+    }
+
 }
