@@ -24863,163 +24863,83 @@ body.white-version .blog-style-three .carousel-control-next {
 
 /*# sourceMappingURL=style.css.map */
 
-/* Verberg de hele highlights-carousel én de titel op mobiel */
+/* ========================================== */
+/* 1. MOBIELE AANPASSINGEN (Max 767px)        */
+/* ========================================== */
 @media (max-width: 767px) {
-    .elementor-element-4bf5c75, /* De titel-widget */
-    .elementor-element-cddc240  /* De carousel-widget */ {
+    
+    /* Verberg de hele highlights-carousel én de titel volledig op mobiel */
+    .elementor-element-4bf5c75, 
+    .elementor-element-cddc240 {
         display: none !important;
     }
-    /* 1. Forceer de titel ECHT in het midden */
-    .elementor-element-4bf5c75 .section-title * {
-        text-align: center !important;
-        display: block !important;
-    }
-    /* 1. Reset de Elementor sectie-hoogte voor mobiel zodat hij niet geforceerd 'full screen' pusht */
 
+    /* Reset de Elementor hero-hoogte voor mobiel */
     .elementor-element-898c42b {
-
         height: auto !important;
-
         min-height: auto !important;
-
         padding-top: 60px !important;
-
         padding-bottom: 40px !important;
-
     }
 
-
-
-    /* 2. Centreer alle teksten en elementen in de hero */
-
+    /* Centreer alle teksten en elementen in de hero */
     .elementor-element-898c42b .elementor-widget-wrap {
-
         text-align: center !important;
-
         display: flex !important;
-
         flex-direction: column !important;
-
         align-items: center !important;
-
         justify-content: center !important;
-
     }
 
-
-
-    /* 3. Voorkom dat de roterende tekst afbreekt of een vaste desktop-breedte pakt */
-
+    /* Voorkom dat de roterende tekst afbreekt */
     .elementor-element-898c42b .cd-words-wrapper {
-
         width: auto !important;
-
         display: inline-block !important;
-
         overflow: visible !important;
-
         text-align: center !important;
-
     }
-
     
-
     .elementor-element-898c42b .cd-headline {
-
         display: block !important;
-
         text-align: center !important;
-
     }
 
-
-
-    /* 4. Maak de beschrijving compact en leesbaar */
-
+    /* Maak de beschrijving compact en leesbaar op mobiel */
     .elementor-element-898c42b .description {
-
         text-align: center !important;
-
         font-size: 15px !important;
-
         line-height: 1.6 !important;
-
         max-width: 90% !important;
-
         margin: 15px auto 25px auto !important;
-
     }
 
-
-
-    /* 5. Zorg dat de knop mooi gecentreerd staat en niet plakt */
-
+    /* Zorg dat de knop mooi gecentreerd staat */
     .elementor-element-9c35fc8 {
-
-        margin-bottom: 40px !important; /* Ruimte tussen knop en de afbeelding eronder */
-
+        margin-bottom: 40px !important; 
     }
-
     
-
     .elementor-element-9c35fc8 .elementor-button-wrapper {
-
         text-align: center !important;
-
     }
 
-
-
-    /* 6. Breng de afbeelding (het logo) terug naar een subtieler formaat */
-
-    .elementor-element-3147cd5 img {
-
-        max-width: 140px !important; /* Niet te lomp groot op een gsm scherm */
-
-        height: auto !important;
-
-        margin: 0 auto !important;
-
-        display: block !important;
-
-        opacity: 0.9;
-
-    }
-
-/* Dwing de kolom en de widget-container van de afbeelding in het midden */
-
+    /* Dwing de kolom en de container van de afbeelding in het midden */
     .elementor-element-8f44579,
-
     .elementor-element-3147cd5,
-
     .elementor-element-3147cd5 .elementor-widget-container {
-
         text-align: center !important;
-
         display: flex !important;
-
         justify-content: center !important;
-
         align-items: center !important;
-
         width: 100% !important;
-
     }
 
-
-
-    /* De afbeelding zelf */
-
+    /* De afbeelding (logo) zelf op mobiel */
     .elementor-element-3147cd5 img {
-
         max-width: 140px !important;
-
         height: auto !important;
-
         margin: 0 auto !important;
-
         display: block !important;
-
+        opacity: 0.9;
     }
-
-}
+} 
+/* <--- Deze sluitaccolade sloot de mobiele weergave correct af! */
