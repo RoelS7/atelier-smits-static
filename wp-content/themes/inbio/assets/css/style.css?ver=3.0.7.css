@@ -24862,3 +24862,53 @@ body.white-version .blog-style-three .carousel-control-next {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+@media (max-width: 767px) {
+    /* 1. Zorg dat de teksten in deze specifieke slider mobiel gecentreerd staan */
+    #carouselExampleControls .inner {
+        text-align: center !important;
+    }
+
+    /* Gecentreerde vinkjes/features op mobiel */
+    #carouselExampleControls .feature-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* 2. Zet de carousel knoppen netjes gecentreerd onder de slider */
+    #carouselExampleControls {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Dwingt de knoppen in een rij onderaan te staan */
+    #carouselExampleControls .carousel-control-prev,
+    #carouselExampleControls .carousel-control-next {
+        position: relative !important;
+        display: inline-flex !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        margin: 15px 10px 0 10px !important; /* Ruimte boven de knoppen en tussen elkaar */
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    /* Container om de knoppen horizontaal te centreren */
+    #carouselExampleControls .carousel-inner {
+        order: 1;
+    }
+    
+    /* Zorgt dat de knoppen pas na de slider getoond worden en centreert ze */
+    .carousel-control-prev, .carousel-control-next {
+        order: 2;
+    }
+    
+    /* Flexbox wrapper trucje om de knoppen naast elkaar in het midden te krijgen */
+    #carouselExampleControls {
+        align-items: center;
+    }
+}
