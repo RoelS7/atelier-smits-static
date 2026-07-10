@@ -281,8 +281,17 @@
         margin: 0 auto;
     }
 }
-.elementor-251 .elementor-element.elementor-element-8b5a261 {
-    --divider-border-style: solid;
-    --divider-color: #B8925C;
-    --divider-border-width: 1px;
+/* De container van de divider moet ruimte hebben */
+.elementor-widget-divider {
+    display: block;
+    width: 100%;
+    padding: 20px 0; /* Zorgt voor wat ruimte boven en onder */
+}
+
+/* De daadwerkelijke lijn */
+.elementor-divider-separator {
+    display: block;
+    width: 100%;
+    border-top: 2px solid #B8925C; /* De dikte en jouw gouden kleur */
+    margin: 0 auto;
 }
