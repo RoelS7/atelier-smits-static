@@ -24863,41 +24863,15 @@ body.white-version .blog-style-three .carousel-control-next {
 
 /*# sourceMappingURL=style.css.map */
 
+/* Verberg de hele highlights-carousel én de titel op mobiel */
 @media (max-width: 767px) {
+    .elementor-element-4bf5c75, /* De titel-widget */
+    .elementor-element-cddc240  /* De carousel-widget */ {
+        display: none !important;
+    }
     /* 1. Forceer de titel ECHT in het midden */
     .elementor-element-4bf5c75 .section-title * {
         text-align: center !important;
         display: block !important;
-    }
-
-    /* 2. Verberg de pijltjes (vorige/volgende) volledig op mobiel */
-    #carouselExampleControls .carousel-control-prev,
-    #carouselExampleControls .carousel-control-next {
-        display: none !important;
-    }
-
-    /* 3. Zet de carousel-items onder elkaar in plaats van achter elkaar */
-    #carouselExampleControls .carousel-inner {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 40px; /* Ruimte tussen de projecten */
-    }
-
-    #carouselExampleControls .carousel-item {
-        display: block !important;
-        margin-right: 0 !important;
-        opacity: 1 !important;
-    }
-
-    /* Tekst centreren voor een nette mobiele look */
-    #carouselExampleControls .inner {
-        text-align: center !important;
-        margin-bottom: 15px;
-    }
-    
-    #carouselExampleControls .feature-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 }
