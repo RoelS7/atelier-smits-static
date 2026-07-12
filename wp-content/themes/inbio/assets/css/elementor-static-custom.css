@@ -483,24 +483,27 @@
     color: #B8925C !important;
 }
 
-/* 1. Ruimte tussen de header en de pagina-inhoud op mobiel */
+/* 1. Ruimte tussen header en content (voor HEEL de site, dus ook home) */
 @media only screen and (max-width: 768px) {
-    .main-page-wrapper {
-        padding-top: 90px !important; /* Verhoog dit getal als de content er nog te dicht op staat */
+    /* We geven de main container wat 'ademruimte' aan de bovenkant */
+    .main-page-wrapper, .elementor-page-wrapper {
+        padding-top: 80px !important;
     }
 }
 
-/* 2. De Contactknop groter, klikbaarder en premium */
+/* 2. De Contactknop 'premium' maken (overschrijft je oude code) */
 @media only screen and (max-width: 575px) {
     .header-wrapper .header-right a.rn-btn {
-        padding: 12px 25px !important;      /* Meer klikvlak rondom de tekst */
-        font-size: 15px !important;         /* Beter leesbaar */
-        font-weight: 600;                   /* Iets vetter voor premium look */
-        min-height: 45px !important;        /* Cruciaal voor 'thumb-friendly' gebruik */
-        display: inline-flex !important;    /* Zorgt voor perfecte centrering van tekst */
+        font-size: 15px !important;        /* Was 10px, nu leesbaar */
+        padding: 10px 20px !important;     /* Was 9px 10px, nu groter */
+        line-height: 1.5 !important;
+        min-height: 44px !important;       /* Cruciaal voor klikbaarheid */
+        min-width: auto !important;        /* Verwijdert de max-content beperking */
+        display: inline-flex !important;
         align-items: center;
         justify-content: center;
-        border-radius: 6px;                 /* Iets zachtere hoeken oogt luxer */
-        transition: all 0.3s ease;          /* Soepelere overgang */
+        border-radius: 6px !important;     /* Zachtere hoeken */
+        background-color: #B8925C !important; /* Optioneel: zorg dat de kleur klopt */
+        color: #fff !important;
     }
 }
