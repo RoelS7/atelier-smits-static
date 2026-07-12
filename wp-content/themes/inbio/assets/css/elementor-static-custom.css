@@ -423,3 +423,57 @@
         flex-direction: column;
     }
 }
+/* Premium Layout Wrapper */
+.premium-page-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section: 66% / 33% */
+.premium-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.hero-left { flex: 0 0 calc(66% - 20px); }
+.hero-right { flex: 0 0 calc(33% - 20px); }
+
+/* Services Grid: 3 kaarten */
+.premium-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Tekst en kleuren */
+.premium-page-container p, 
+.premium-page-container .description {
+    color: #B8B1A4 !important;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.premium-page-container h1, .premium-page-container h2 { color: #333; }
+
+/* Mobiele optimalisatie */
+@media (max-width: 992px) {
+    .hero-left, .hero-right { flex: 0 0 100%; }
+    .premium-services-grid { grid-template-columns: 1fr; }
+}
+
+/* HAVN Box */
+.havn-premium-box {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
