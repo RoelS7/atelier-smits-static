@@ -366,3 +366,60 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Globale instellingen voor deze secties */
+.service-page-wrapper {
+    max-width: 1140px; /* Dit houdt de content netjes in het midden */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tekstkleur aanpassing */
+.service-page-wrapper p, 
+.service-page-wrapper .description {
+    color: #B8B1A4 !important;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Hero Sectie - Uitlijning fix */
+.service-page-wrapper .elementor-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Dun gouden lijntje (Divider) */
+.thin-gold-divider {
+    border-top: 1px solid #B8925C;
+    margin: 40px auto;
+    width: 100%;
+}
+
+/* HAVN Sectie - Premium design */
+.havn-premium-box {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.havn-premium-box img {
+    max-width: 120px;
+}
+
+/* Mobiel optimalisatie */
+@media (max-width: 768px) {
+    .havn-premium-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .service-page-wrapper .elementor-container {
+        flex-direction: column;
+    }
+}
