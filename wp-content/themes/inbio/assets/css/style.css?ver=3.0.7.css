@@ -15352,6 +15352,10 @@ div#featured-project-carousel {
   border-radius: 10px;
   position: relative;
   z-index: 1;
+  order-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
 }
 .client-card .main-content .inner::after {
   content: "";
@@ -17550,6 +17554,10 @@ div#carouselExampleControlsImg:hover .carousel-control-next {
   position: relative;
   z-index: 1;
   transition: 0.5s all ease-in-out;
+  order-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rn-portfolio {
