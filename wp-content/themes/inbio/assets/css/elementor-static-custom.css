@@ -25323,9 +25323,10 @@ body.white-version .blog-style-three .carousel-control-next {
 
 /* Globale instellingen voor deze secties */
 .service-page-wrapper {
-    max-width: 1140px; /* Dit houdt de content netjes in het midden */
+    max-width: 1400px; /* Dit houdt de content netjes in het midden */
     margin: 0 auto;
     padding: 0 20px;
+    margin-top: 100px;
 }
 
 /* Tekstkleur aanpassing */
