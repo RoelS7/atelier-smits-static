@@ -2,76 +2,14 @@
     "use strict";
 
     $(document).ready(function () {
-        
-        // 1. Portfolio & Carousel Activatie
-        function initSlickSliders() {
-            // Portfolio Slick
-            $('.portfolio-slick-activation').slick({
-                infinite: false,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: true,
-                cssEase: 'linear',
-                adaptiveHeight: true,
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
-                responsive: [
-                    { breakpoint: 1124, settings: { slidesToShow: 2 } },
-                    { breakpoint: 868, settings: { slidesToShow: 1 } },
-                    { breakpoint: 576, settings: { slidesToShow: 1, dots: true, arrows: false } }
-                ]
-            });
-
-            // Testimonial & Brand Sliders
-            $('.testimonial-activation, .testimonial-item-one, .blog-slick-activation, .testimonial-activation-item-3').each(function() {
-                $(this).slick({
-                    infinite: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: true,
-                    arrows: true,
-                    adaptiveHeight: true,
-                    prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                    nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>'
-                });
-            });
-
-            $('.brand-activation-item-5').slick({
-                dots: true,
-                arrows: true,
-                slidesToShow: 4,
-                responsive: [
-                    { breakpoint: 1124, settings: { slidesToShow: 2 } },
-                    { breakpoint: 868, settings: { slidesToShow: 1 } }
-                ]
-            });
-
-            $(".inbio-carousel-gallery").slick({
-                dots: true,
-                arrows: true,
-                adaptiveHeight: true,
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>'
-            });
-        }
-
-        initSlickSliders();
-
-        // 2. Video Opruim functie (zorgt dat video's niet automatisch starten)
-        let iframes = document.querySelectorAll("iframe");
-        iframes.forEach(iframe => {
-            let src = iframe.getAttribute("src");
-            if (src && src.includes("autoplay=1")) {
-                iframe.setAttribute("src", src.replace("autoplay=1", "autoplay=0"));
-            }
+        // Activeer alle Bootstrap carrousels op de pagina
+        $('.carousel').carousel({
+            interval: 5000, // Wisselt elke 5 seconden
+            pause: 'hover'  // Pauzeert als je eroverheen muist
         });
 
-        let videos = document.querySelectorAll("video");
-        videos.forEach(video => {
-            video.autoplay = false;
-            video.pause();
-        });
-
+        // Zorg dat de eerste item zichtbaar is (Bootstrap heeft class 'active' nodig)
+        $('.carousel-inner .carousel-item:first-child').addClass('active');
     });
+
 })(jQuery, window);
