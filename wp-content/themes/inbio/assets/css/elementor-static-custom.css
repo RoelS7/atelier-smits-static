@@ -12399,7 +12399,7 @@ p.has-drop-cap:not(:focus):first-letter {
   font-size: 60px;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--color-lightn);
+  color: #eaeaea;
   margin-top: 15px;
   margin-bottom: 0;
 }
