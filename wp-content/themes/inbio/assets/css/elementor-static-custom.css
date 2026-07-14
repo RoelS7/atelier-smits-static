@@ -25462,3 +25462,6 @@ body.white-version .blog-style-three .carousel-control-next {
         color: #fff !important;
     }
 }
+* {
+    outline: 1px solid red !important;
+}
