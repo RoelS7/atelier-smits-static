@@ -30,38 +30,8 @@
       imJs._slickactivation();
       imJs.clapAnimation();
       imJs.stopVideo();
-      imJs.plyrVideo();
       imJs.swiperSlideronModal();
       imJs.portfolio_slick_activation();
-    },
-
-    plyrVideo: function () {
-      // init video player for courses Curriculum
-      const player = new Plyr(".rbt-player");
-    },
-
-    stopVideo: function () {
-      $(".modal").on("show.bs.modal", function (event) {
-        $(this).find(".portfolio-popup-thumbnail iframe").attr("src", $(event.relatedTarget).data("url"));
-      });
-      $(".modal").on("hidden.bs.modal", function (e) {
-        $(this).find(".portfolio-popup-thumbnail iframe").attr("src", "");
-      });
-
-      $.fn.stopVideoAfterLoadmore = function () {
-        return this.each(function () {
-          $(".modal").on("show.bs.modal", function (event) {
-            $(this)
-              .find(".portfolio-popup-thumbnail iframe").attr("src", $(event.relatedTarget).data("url"));
-          });
-          $(".modal").on("hidden.bs.modal", function (e) {
-            $(this).find(".portfolio-popup-thumbnail iframe").attr("src", "");
-          });
-        });
-      };
-      $(document).on("click", ".close", function () {
-        $(this).stopVideoAfterLoadmore();
-      });
     },
 
     swiperSlideronModal: function () {
